@@ -89,9 +89,6 @@ namespace Tuples
             {
                 Console.WriteLine(tupleThing);
             }
-
-
-
         }
     }
 }
