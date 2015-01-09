@@ -23,14 +23,13 @@ namespace Tuples
 
             // pass tuple as an argument
             WriteTuple(tuple);
-
+            
             // Tuple.Create
             var createdTuple = Tuple.Create("cat", 2, true);
 
             WriteCreatedTuple(createdTuple);
 
             //SortTupleList();
-
             SortTupleWithLinq();
 
             Console.Read();
@@ -41,6 +40,8 @@ namespace Tuples
             Console.WriteLine(myCreatedTuple.Item1);
             Console.WriteLine(myCreatedTuple.Item2);
             Console.WriteLine(myCreatedTuple.Item3);
+
+
         }
 
         static void WriteTuple(Tuple<string, string[], int, int[]> myTuple)
@@ -90,5 +91,21 @@ namespace Tuples
                 Console.WriteLine(tupleThing);
             }
         }
+
+        static void PlayWithFooClass()
+        {
+            var firstFoo = new MyFooClass();
+            firstFoo.Name = "Bar";
+            firstFoo.Age = 15;
+
+        }
+    class MyFooClass
+    {
+        public string Name { get; set; }
+
+        public int Age { get; set; }
+                        
+
     }
+
 }
