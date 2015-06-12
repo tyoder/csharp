@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsyncAwaitReplaceTaskBased"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TAPBeforeAsyncAwait", "TAPBeforeAsyncAwait\TAPBeforeAsyncAwait.csproj", "{0CCD0404-DDAE-4C25-9333-64371072AB33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "misc", "misc\misc.csproj", "{AF4F203F-FD3B-4A68-8E3B-3F418E60E7B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{0CCD0404-DDAE-4C25-9333-64371072AB33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0CCD0404-DDAE-4C25-9333-64371072AB33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0CCD0404-DDAE-4C25-9333-64371072AB33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF4F203F-FD3B-4A68-8E3B-3F418E60E7B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4F203F-FD3B-4A68-8E3B-3F418E60E7B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4F203F-FD3B-4A68-8E3B-3F418E60E7B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4F203F-FD3B-4A68-8E3B-3F418E60E7B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
