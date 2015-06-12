@@ -32,12 +32,13 @@ namespace AsyncAwaitReplaceTaskBased
                 using (var fileStream = File.OpenRead(filePath))
                 {
                     var readBuffer = new Byte[fileStream.Length];
-                    
-                    // Does this...
                     bytesRead = await fileStream.ReadAsync(readBuffer, 0, (int)fileStream.Length);
                     // Control should return to caller here...until ReadAsync is done...
+                    // The following lines are a continuation...after the await above
+                    Console.WriteLine("Read {0} bytes successfully from file {1}", bytesRead, filePath);
+                    return bytesRead;
 
-                    // Replace this?
+                    // Using await replaces using a continuation like the following
                     //fileStream.ReadAsync(readBuffer, 0, (int) fileStream.Length).ContinueWith(task =>
                     //{
                     //    bytesRead = task.Result;
@@ -45,9 +46,7 @@ namespace AsyncAwaitReplaceTaskBased
                     //    return bytesRead;
                     //});
                  
-                    // The following lines are a continuation...after the await above
-                    Console.WriteLine("Read {0} bytes successfully from file {1}", bytesRead, filePath);
-                    return bytesRead;
+                   
                 }
             }
             catch (Exception)

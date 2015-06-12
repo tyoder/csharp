@@ -15,16 +15,16 @@ namespace TraditionalAPMAsync
         static void Main(string[] args)
         {
             // First Method
-            /*byte[] readBuffer;
-            var fs = File.OpenRead("lipsum.txt");
-            readBuffer = new byte[fs.Length];
-            var result = fs.BeginRead(readBuffer, 0, (int)fs.Length, OnReadComplete, fs);*/
+            //byte[] readBuffer;
+            //var fs = File.OpenRead("lipsum.txt");
+            //readBuffer = new byte[fs.Length];
+            //var result = fs.BeginRead(readBuffer, 0, (int)fs.Length, OnReadComplete, fs);
 
             // Second Method
             byte[] readBuffer;
             var fs = File.OpenRead("lipsum.txt");
             readBuffer = new byte[fs.Length];
-            var result = fs.BeginRead(readBuffer, 0, (int) fs.Length, asyncResult =>
+            var result = fs.BeginRead(readBuffer, 0, (int)fs.Length, asyncResult =>
             {
                 var bytesRead = fs.EndRead(asyncResult);
                 Console.WriteLine("Read {0} bytes successfully.", bytesRead);
@@ -33,6 +33,7 @@ namespace TraditionalAPMAsync
             
 
             // do other work
+            var hitme = "now";
 
             Console.ReadLine();
         }

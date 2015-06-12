@@ -14,25 +14,28 @@ namespace TaskBasedAsync
     {
         static void Main(string[] args)
         {
-            // First Sample
-            /*var fs = File.OpenRead("lipsum.txt");
-            var readBuffer = new byte[fs.Length];
-            fs.ReadAsync(readBuffer, 0, (int) fs.Length)
-                .ContinueWith(task =>
-                {
-                    if (task.Status == TaskStatus.RanToCompletion)
-                    {
-                        Console.WriteLine("Read {0} bytes successfully", task.Result);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Exception occurred");
-                    }
+            //// First Sample
+            //var fs = File.OpenRead("lipsum.txt");
+            //var readBuffer = new byte[fs.Length];
+            
+            //// Note: ReadAsync returns Task<int> which means task.Result below is an int.
+            //// ContinueWith is an extension method on ReadAsync which specifies an action to run when ReadAsync is completed.
+            //fs.ReadAsync(readBuffer, 0, (int) fs.Length)
+            //    .ContinueWith(task =>
+            //    {
+            //        if (task.Status == TaskStatus.RanToCompletion)
+            //        {
+            //            Console.WriteLine("Read {0} bytes successfully", task.Result);
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("Exception occurred");
+            //        }
 
-                    fs.Dispose();
+            //        fs.Dispose();
 
-                });
-            */
+            //    });
+            
 
 
             //Second Sample using WhenAll
@@ -49,7 +52,7 @@ namespace TaskBasedAsync
 
                 });
            
-            // Compare WhenAll to WaitAll...WaitAll blocks until the tasks are done
+            //Compare WhenAll to WaitAll...WaitAll blocks until the tasks are done, WhenAll returns an array of tasks, uses a continuation and does not block.
             //Task.WaitAll(read1, read2);
             //Console.WriteLine("All files have been read successfully.");
 
